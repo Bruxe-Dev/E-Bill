@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Navbar from './navbar';
 import Hero from './hero';
 import Workflow from './worlflow';
+import Features from './features';
 
 const GlobalStyle = createGlobalStyle`
   * { box-sizing: border-box; }
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Hero />
       <Workflow />
+      <Features />
     </>
   );
 }
