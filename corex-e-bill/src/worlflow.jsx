@@ -72,19 +72,16 @@ export default function Workflow() {
     const steps = [
         {
             num: "01",
-            icon: "📦",
             title: "Place Product",
             desc: "Drop any item into the CoreX smart box. No need to look for barcodes or align labels."
         },
         {
             num: "02",
-            icon: "👁️",
             title: "AI Recognition",
             desc: "Our high-speed camera uses Computer Vision to identify the product and its weight instantly."
         },
         {
             num: "03",
-            icon: "💳",
             title: "Instant Bill",
             desc: "Scan the generated QR code to pay via Mobile Money or card. Your receipt prints automatically."
         }
