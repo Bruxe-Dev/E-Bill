@@ -1,121 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Navbar from './navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+    <div className="min-h-screen bg-[#0a0f1a] text-white selection:bg-blue-500/30">
+      <Navbar />
+
+      {/* HERO SECTION */}
+      <main className="max-w-7xl mx-auto px-6 pt-20 pb-32">
+        <div className="flex flex-col items-center text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-8">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span className="text-blue-400 text-xs font-bold tracking-widest uppercase">Next-Gen Robotics Prototype</span>
+          </div>
+
+          <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
+            INTELLIGENT <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">
+              E-BILLING.
+            </span>
+          </h1>
+
+          <p className="text-gray-400 text-lg max-w-2xl mb-12 leading-relaxed">
+            Revolutionizing retail with computer vision. Our automated billing box identifies
+            products instantly, calculates totals, and generates bills—no barcodes required.
           </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-white text-black hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-lg transition-all">
+              Watch Demo
+            </button>
+            <button className="bg-gray-900 border border-gray-800 hover:border-gray-600 px-10 py-4 rounded-full font-bold text-lg transition-all">
+              View Specs
+            </button>
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        {/* MOCKUP PREVIEW (The "Box") */}
+        <div className="mt-24 relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-20"></div>
+          <div className="relative bg-[#111827] border border-gray-800 rounded-2xl p-4 aspect-video flex items-center justify-center overflow-hidden">
+            <div className="text-gray-700 font-mono text-sm">[ CAMERA FEED INITIALIZING... ]</div>
+            {/* You will eventually replace this with your Demo Video */}
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
