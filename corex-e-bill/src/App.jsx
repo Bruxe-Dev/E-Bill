@@ -1,22 +1,17 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import Navbar from './navbar';
+import Hero from './hero';
 
-// This sets the background for the whole website
 const GlobalStyle = createGlobalStyle`
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     padding: 0;
     background-color: #0a0f1a;
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
+    scroll-behavior: smooth;
   }
-`;
-
-const MainContent = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
 `;
 
 function App() {
@@ -24,10 +19,7 @@ function App() {
     <>
       <GlobalStyle />
       <Navbar />
-      <MainContent>
-        <h1>Welcome to CoreX</h1>
-        <p>Ready to build the future of Rwanda's retail.</p>
-      </MainContent>
+      <Hero />
     </>
   );
 }
